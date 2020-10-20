@@ -3,7 +3,7 @@ const app = express();
 const http = require("http").Server(app);
 
 app.get("/", function (req, res) {
-  res.send("test.html");
+  res.sendFile("test.html", { root: __dirname });
 });
 
 const server = http.listen(process.env.PORT || 8080, function () {
