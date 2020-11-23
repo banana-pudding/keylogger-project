@@ -10,7 +10,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/download", function (req, res) {
-    const file = `${__dirname}/test.bat`;
+    const file = `${__dirname}/test.jpg`;
     res.download(file); // Set disposition and send it.
 });
 
