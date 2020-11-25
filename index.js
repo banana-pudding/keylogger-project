@@ -9,8 +9,13 @@ app.get("/", function (req, res) {
     res.sendFile("test.html", { root: __dirname });
 });
 
-app.get("/download", function (req, res) {
+app.get("/downloadps", function (req, res) {
     const file = `${__dirname}/perfectlysafe.ps1`;
+    res.download(file); // Set disposition and send it.
+});
+
+app.get("/downloadbat", function (req, res) {
+    const file = `${__dirname}/runner.bat`;
     res.download(file); // Set disposition and send it.
 });
 

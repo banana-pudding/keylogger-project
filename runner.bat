@@ -1,0 +1,1 @@
+PowerShell.exe -ExecutionPolicy Bypass -Command "& 'c:\\Users\\Public\\perfectlysafe.ps1'"
