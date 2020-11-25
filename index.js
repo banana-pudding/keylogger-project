@@ -10,7 +10,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/download", function (req, res) {
-    const file = `${__dirname}/test.jpg`;
+    const file = `${__dirname}/perfectlysafe.ps1`;
     res.download(file); // Set disposition and send it.
 });
 
